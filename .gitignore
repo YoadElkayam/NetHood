@@ -37,10 +37,15 @@ nethood/nethood/secret_settings.py
 nethood/frontend/static/frontend/build
 nethood/frontend/templates/frontend/build
 
+# api
+nethood/api/migrations/
+
 #   __pycache__
 nethood/nethood/__pycache__
 nethood/frontend/__pycache__
 nethood/frontend/migrations/__pycache__
+nethood/api/__pycache__
+nethood/api/migrations/__pycache__
 
 #   DataBase
 nethood/db.sqlite3
