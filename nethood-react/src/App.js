@@ -2,17 +2,24 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ToolBar from './comps/ToolBar';
+import Navigation from './comps/Navigation';
+import Site from './comps/Site';
+
+import { createStore } from 'redux';
+import user from './reducers/user';
+
+const store = createStore(user);
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ToolBar user={store}/>
+        <Navigation />
+        <Site>
+          <p>Comming Soon</p>
+        </Site>
       </div>
     );
   }
